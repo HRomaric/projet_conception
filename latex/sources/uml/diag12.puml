@@ -1,0 +1,32 @@
+@startuml
+autonumber
+skinparam sequenceMessageAlign center
+skinparam actorStyle hollow
+
+actor "Utilisateur" as m
+participant "Application" as ins
+actor "Serveur mail" as bm
+
+== Prérequis ==
+
+m -> ins: a activé la réception des notifications
+
+== Processus ==
+
+ins -> ins: reçoit une notification
+ins -> ins: enregistre la notification
+ins -> m: ping l'utilisateur
+alt option d’envoi de mail activée
+    ins -> bm: demande l'envoie d'un mail
+    bm -> m: envoie un mail
+    m --> bm: mail reçu
+    m -> m: consulte la boîte mail
+    m --> bm: mail lu
+end
+m -> ins: connexion à l'application
+hnote across
+    Processus 7 décrit dans le cas d'utilisation __connexion__
+end note
+m -> ins: vérification des notifications
+m -> ins: interaction et suppression des notifications
+@enduml

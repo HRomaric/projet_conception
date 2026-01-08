@@ -1,0 +1,22 @@
+@startuml
+autonumber
+skinparam sequenceMessageAlign center
+skinparam actorStyle hollow
+
+actor "Utilisateur" as usr
+participant "Application" as app
+
+== Processus ==
+      usr -> app : Accède à la page de connexion
+      app -> usr : Demande de renseigner les données
+      usr -> app : Renseigne son pseudo et son mot de passe
+      app -> app : Vérifications des données
+      alt données invalide
+        app -> usr : données invalide
+        usr -> app : renseigne les nouvelles données
+        app -> app : Vérifications des données
+      end
+      app -> usr : Valide les données
+      app -> usr : Confirme l'authentifiaction
+      app -> usr : Redirection vers la page d'acceuil
+@enduml

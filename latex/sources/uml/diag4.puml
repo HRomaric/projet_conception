@@ -1,0 +1,40 @@
+@startuml
+autonumber
+skinparam sequenceMessageAlign center
+skinparam actorStyle hollow
+actor "Utilisateur" as u
+participant "Application" as ins
+actor "Serveur mail" as bm
+
+== Prérequis ==
+
+u -> ins: inscription en cours
+
+== Processus ==
+
+u -> ins: renseigne une adresse mail
+ins -> ins: vérifie que l'adresse mail existe et est valide
+alt adresse valide
+ins -> bm: demande d'envoie d'un mail de confirmation
+bm -> u: evoie du mail
+u -> u: consulte la boîte mail
+alt mail non reçu
+    loop Jusqu’à ce que le mail soit reçu
+        u -> bm: demande de renvoi du mail
+        bm -> u: renvoie un mail de confirmation
+        u -> u: consulte la boîte mail
+    end
+end
+u -> bm: valide le mail
+note right
+    peut utiliser différentes méthodes de validation comme par exemple
+    le code envoyé par mail
+end note
+bm --> ins: mail validé
+ins -> ins: valide l'adresse mail utilisée
+ins -> u: confirmation de la validation du mail
+else adresse non valide
+ins -> u: prévient l'utilisateur que l'adresse \n n'est pas valide
+end
+
+@enduml

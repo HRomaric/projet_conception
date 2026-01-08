@@ -1,0 +1,62 @@
+@startuml
+autonumber
+skinparam sequenceMessageAlign center
+skinparam actorStyle hollow
+
+actor "Utilisateur" as usr
+participant "Application" as app
+
+== Prérequis ==
+usr -> app : se connecter
+     hnote across
+     Avoir fait le scénario __Modifier son profil public__ du cas d'usage __Modifier son profil__
+     end note
+
+== Processus ==
+
+opt modifier son pseudo
+     usr -> app : Sélectionne le champ pseudo
+     usr -> app : Change le pseudo
+end
+
+opt modifier son âge
+     usr -> app : Sélectionne le champ de l'âge
+     usr -> app : change l'âge
+end
+
+opt modifier sa ville
+     usr -> app : Sélectionne le champ de la ville
+     usr -> app : Sélectionne la ville parmis la sélection
+end
+
+opt modifier son genre
+     usr -> app : Sélectionne le champ du genre
+     usr -> app : Change le genre
+end
+
+opt modifier sa biographie
+     usr -> app : Sélectionne le champ de la biographie
+     usr -> app : Change la biographie
+end
+
+opt modifier ses centres d'intérêts
+     usr -> app : Sélectionne le champ des centres d'intérêts
+     usr -> app : Change les centre d'intérêts
+end
+
+opt ajouter des médias
+     usr -> app : Sélectionne la zone des médias
+     usr -> app : Choisi l'option ajoputer media
+     usr -> app : Choisi les fichiers souhaiter
+end
+
+opt supprimer des médias
+     usr -> app : Sélectionne la zone des médias
+     usr -> app : Reste appuiez un instant sur le media
+     usr -> app : Clique sur l'option supprimer
+end
+
+
+usr -> app : Clique sur enregistrer les modifications
+app -> usr : Confirme la modification
+@enduml

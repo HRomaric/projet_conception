@@ -1,0 +1,89 @@
+@startuml
+left to right direction
+skinparam linetype ortho
+
+class "Utilisateur" as usr{
+     - age : entier
+     - ville : chaine de caractère
+     - biographie : chaine de caractère
+     - interet : tableaux de chaine de caractère
+     + configurerProfil()
+     + configurerAffichage()
+     + rechercherProfil()
+     + consulterRecomendation()
+     + créerListeRecomendation(Critères ... c) : Tableau d'utillisateur
+     + consulterNotification()
+     + signaler()
+     + aimerProfil()
+     + accederProfil()
+     + ajouterMedia()
+}
+
+class "Compte" as cp{
+     - pseudo : chaine de caractère
+     - mot_de_passe : chaine de caractère
+     - adresse_mail : chaine de caractère
+     + connexion()
+     + deconnexion()
+     + supprimerProfil()
+}
+
+class "moderateur" as modo {
+     + validerInscription()
+     + bloquerUtilisateur()
+     + supprimerContenu()
+}
+
+class "Gestionnaire de compte" as g{
+     + ajouterModerateur()
+     + ajouterUtilisateur()
+     + getListeModo() : tableaux de modérateur
+     + getListeUsr() : tableaux d'utilisateur
+
+}
+
+interface "signalable" as s{
+     + signaler()
+}
+
+class "Conversation" as c{
+     + getMessages()
+     + getUtilisateur1()
+     + getUtilisateur2()
+}
+
+class "Messages" as m {
+     - message : Tabeau de chaines de caractères
+     + getMessage() : tableau de chaines de caractères
+
+}
+
+class "Media" as me{
+     - nom: chaine de caractère
+     - extension : chaine de caractères
+     - dateCréation : chaine de caractères
+     + getNom() : chaine de caractères
+     + getExtension() : chaine de caractères
+     + getDate() : chaine de caractères
+}
+
+
+
+modo -right-|> cp
+usr --|> cp
+
+g "1" -- "0..*" modo
+g "1" -- "0..*" usr
+
+me "0..*" -- usr
+
+s <|.. usr
+s <|.. me
+s <|.. c
+s <|.. m
+s -- "1" g
+
+c "1"--"0..*" m
+c "0..*"--"2" usr
+c "1" -- "0..*" me
+@enduml

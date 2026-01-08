@@ -1,0 +1,14 @@
+@startuml
+autonumber
+skinparam sequenceMessageAlign center
+skinparam actorStyle hollow
+
+actor "Utilisateur" as usr
+participant "Application" as app
+
+usr -> app : Accède à la messagerie
+app -> usr : Montre les conversations
+app -> usr : Notifie pour les messages non lus
+usr -> app : Choisit une conversations
+app -> usr : Montre les messages de la conversations
+@enduml

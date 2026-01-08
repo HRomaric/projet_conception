@@ -1,0 +1,72 @@
+@startuml
+
+autonumber
+
+skinparam sequenceMessageAlign center
+skinparam actorStyle hollow
+
+actor "Utilisateur" as u
+participant "Application" as app
+
+== Prérequis ==
+
+u -> app: connexion à l'URL
+app -> u: proposition de la page inscription/connexion
+u -> app: choix de la page d'inscription
+
+== Processus ==
+app -> u: affichage de la page d'inscription
+u -> app: choix du pseudo
+app -> app: vérification du pseudo
+alt pseudo non valide
+note right
+    Un pseudo déjà utilisé ou grossier ne sera pas valide.
+end note
+    loop Jusqu’à ce que le pseudo soit valide
+        app -> u: demande un nouveau pseudo
+        u -> app: choix du nouveau pseudo
+        app -> app: vérification du nouveau pseudo
+    end
+end
+app -> u: validation de pseudo
+u -> app: choix de l'adresse mail
+app -> app: vérification de l'adresse mail
+hnote across
+    Processus 12 décrit dans le cas d'utilisation __vérifier mail__
+end note
+alt adresse mail non valide
+    loop Jusqu’à ce que l'adresse mail soit valide
+        app -> u: demande une nouvelle adresse mail
+        u -> app: choix de la nouvelle adresse mail
+        app -> app: vérification de la nouvelle adresse mail
+        hnote across
+            Processus 15 décrit dans le cas d'utilisation __vérifier mail__
+        end note
+    end
+end
+app -> u: adresse mail valide
+u -> app: choix du mot de passe
+app -> app: vérification mot de passe
+alt mot de passe non valide
+note right
+    Un mot de passe pet étre trop court ou contenir des charactères interdit.
+end note
+    loop Jusqu’à ce que le mot de passe soit valide
+        app -> u: demande un nouveau mot de passe
+        u -> app: choix du nouveau mot de passe
+        app -> app: vérification du nouveau mot de passe
+    end
+end
+app -> u: validation du mot de passe
+u -> app: transmission du document d'identité
+app -> app: vérification de la demande d'inscription
+hnote across
+    Processus 20 décrit dans le cas d'utilisation __prouver identité__
+end note
+alt demande validée
+    app -> u: inscription validée et terminée
+else demande non validée
+    app -> u: inscription non validée et à recommencer
+end
+
+@enduml

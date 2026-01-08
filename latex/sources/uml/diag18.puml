@@ -1,0 +1,33 @@
+@startuml
+autonumber
+skinparam sequenceMessageAlign center
+skinparam actorStyle hollow
+
+actor "Utilisateur" as usr
+participant "Application" as app
+
+alt signaler un message
+     usr -> app : Sélectionne un message
+     app -> usr : Montre les options sur le message
+     usr -> app : Sélectionne signaler le message
+     app -> usr : Envoie un message de confirmation
+     app -> app: Envoie du message signalé au modérateur
+end
+
+alt signaler un profil
+     usr -> app : Consulter un profil
+     usr -> app : Sélectionne option du profil
+     app -> usr : Montre les options sur le profil
+     usr -> app : Sélectionne signaler le profil
+     app -> usr : Envoie un message de confirmation
+     app -> app: Envoie du profil signalé au modérateur
+end
+
+alt signaler un contenu (Image, photo, ...)
+     usr -> app : Sélectionner le contenu
+     app -> usr : Montre les options du contenu
+     usr -> app : Sélectionne signaler le contunu
+     app -> usr : Envoie un message de confirmation
+     app -> app: Envoie du contenu signalé au modérateur
+end
+@enduml

@@ -1,0 +1,13 @@
+@startuml
+skinparam actorStyle hollow
+usecase "application" as app
+actor "seveur mail \n (1)" as sm
+actor "utilisateur \n (*)" as usr
+actor "modérateur \n (*)" as adm
+actor "nouvel utilisateur \n (*)" as nusr
+
+app -left- sm
+app -right- usr
+app -up- adm
+app -down- nusr
+@enduml

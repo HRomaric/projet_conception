@@ -1,0 +1,34 @@
+@startuml
+autonumber
+skinparam sequenceMessageAlign center
+skinparam actorStyle hollow
+
+actor "Utilisateur" as usr
+participant "Application" as app
+
+== Prérequis ==
+usr -> app : se connecter
+
+
+== Processus ==
+
+alt modifier son profil
+     usr -> app : Accerder à son profil
+     usr -> app : Modifier le profil
+
+     hnote across
+     Processus 1 décrit dans le cas d'utilisation __Modifier profil public__
+     end note
+end
+
+
+
+alt configuer son profil
+     usr -> app : Acceder au paramètre
+     usr -> app : Configurer le compte
+
+     hnote across
+     Processus 1 décrit dans le cas d'utilisation __Configurer profil__
+     end note
+end
+@enduml

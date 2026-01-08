@@ -1,0 +1,30 @@
+@startuml
+autonumber
+skinparam sequenceMessageAlign center
+skinparam actorStyle hollow
+
+actor "Utilisateur" as usr
+participant "Application" as app
+
+== Prérequis ==
+     usr -> app : se connecter
+== Processus ==
+      usr -> app : Sélectionne l'onglet rechercher profil
+      app -> usr : Affiche la page
+
+opt option de distance
+      usr -> app : Sélectionne la distance entre les utilisateurs
+end
+opt option de l'âge
+      usr -> app : Sélectionne la tranche d'âge voulu
+end
+opt option de genre
+      usr -> app : Sélectionne les genres souhaitées
+end
+opt option de contre d'intérêt
+      usr -> app : Sélectionne parmis une sélection les centres d'intérêts
+end
+
+      usr -> app : Valide les choix
+      app -> usr : Affiche les profils
+@enduml

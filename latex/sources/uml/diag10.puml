@@ -1,0 +1,44 @@
+@startuml
+autonumber
+skinparam sequenceMessageAlign center
+skinparam actorStyle hollow
+
+actor "Utilisateur" as usr
+participant "Application" as app
+
+== Prérequis ==
+usr -> app : se connecter
+     hnote across
+     Avoir fait le scénario __Configurer son profil__ du cas d'usage __Modifier profil__
+     end note
+
+== Processus ==
+
+usr -> app : Sélectionne menu Configuration du profil
+
+opt modifier les paramètres de notifications
+     usr -> app : Sélectionne menu paramètres des notifiactions
+     opt mail
+          usr -> app : Sélectionne ou déselectionne option de notification doublé par mail
+     end
+     opt appli
+          usr -> app : Sélectionne ou déselectionne option de notification uniquement sur appli
+     end
+
+end
+
+
+opt modifier les profils recomandé
+     usr -> app : Sélectionne menu profil recommandé
+     usr -> app : Ajoute ou enlève critère de sélection
+end
+
+opt modifier visibilité du profil
+     usr -> app : Sélectionne menu visibilité du profil
+     usr -> app : Ajoute ou enlève critère de sélection
+end
+
+
+usr -> app : Clique sur enregistrer les modifications
+app -> usr : Confirme la modification
+@enduml

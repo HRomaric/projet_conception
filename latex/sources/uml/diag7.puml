@@ -1,0 +1,27 @@
+@startuml
+autonumber
+skinparam sequenceMessageAlign center
+skinparam actorStyle hollow
+
+actor "Modérateur" as m
+participant "Application" as ins
+
+
+== Prérequis ==
+
+ins -> m: notifie une demande d'inscription
+
+== Processus ==
+
+m -> ins: commence le processus de vérification
+ins -> m: envoie des documents d'identité
+m -> m: vérifie si l'identité est déjà associée à un compte
+m -> m: vérifie si l'individu a un âge légal
+m -> m: vérifie si l'identité n'est pas blacklistée des sites de rencontre
+m -> m: vérifie si l'identité existe bel et bien
+alt un des cas n'est pas valide
+    m -> ins: refuse l'inscription
+else tous les cas sont valides
+    m -> ins: valide l'inscription
+end
+@enduml

@@ -1,0 +1,31 @@
+@startuml
+autonumber
+skinparam sequenceMessageAlign center
+skinparam actorStyle hollow
+
+actor "Utilisateur" as usr
+participant "Application" as app
+
+== Prérequis ==
+     usr -> app : se connecter
+== Processus ==
+      usr -> app : Sélectionne l'onglet recommendation de profil
+      app -> usr : Affiche un  profil selon le profil de l'utilisateur
+
+opt suivant
+      usr -> app : Option voir le profil suivant
+      app -> usr : Affiche un autre profil selon les même critères
+end
+opt plus de détail
+      usr -> app : Clique sur le profil
+      app -> usr : Affiche le profil en détail
+end
+opt intéresser
+      usr -> app : Clique sur option "intéresser" / "aimer"
+      app -> usr : Confirme la décision
+      app -> app : Notifie l'utilisateur qui à reçus "l'intérêt"
+      hnote across
+      Voir le cas d'usage Aimer un profil pour plus de détail
+      end note
+end
+@enduml

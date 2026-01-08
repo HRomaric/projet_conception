@@ -1,0 +1,83 @@
+@startuml
+skinparam actorStyle hollow
+skinparam sequenceMessageAlign center
+left to right direction
+skinparam linetype ortho
+
+
+actor "Utilisateur" as usr
+actor "modérateur" as md
+actor "Nouvel utilisateur" as new
+actor "Serveur mail" as sv
+
+
+package "action utilisateur" {
+    usecase "Modifier son profil" as modif
+    usecase "Rechercher des profils" as recherche
+    usecase "Envoier un message" as mp
+    usecase "Consulter les profils recomendés" as reco
+    usecase "Consulter ses notifications" as notif
+    usecase "Signaler un contenu" as signal
+    usecase "Configurer son profil" as config
+    usecase "Modifier son affichage public" as public
+    usecase "Aimer un profil" as validate
+    usecase "Consulter ses messages" as msg
+    usecase "Se connecter" as auth1
+    usecase "Recevoir un message" as rm
+}
+
+
+package "creation de compte" {
+    usecase "Créer un compte" as cc
+    usecase "Prouver son identité" as pi
+    usecase "Vérifier l’addresse mail" as vm
+}
+
+
+package "administrer" {
+    usecase "Gérer les demandes de création de compte" as gcc
+    usecase "Gérer les signalements" as rp
+    usecase "Se connecter" as auth2
+}
+
+
+usr -- recherche
+usr -- mp
+usr -- reco
+usr -- modif
+usr -- notif
+usr -- signal
+usr -- validate
+usr -- msg
+usr -- lire
+usr -- rm
+
+modif --|> config : <<include>>
+modif --|> public : <<include>>
+
+
+new -- cc
+
+cc --|> pi : <<include>>
+cc --|> vm : <<include>>
+vm -- sv
+
+
+md -- gcc
+md -- rp
+
+
+recherche ---|> auth1 : <<include>>
+mp ---|> auth1 : <<include>>
+reco ---|> auth1 : <<include>>
+notif ---|> auth1 : <<include>>
+signal ---|> auth1 : <<include>>
+validate ---|> auth1 : <<include>>
+msg ---|> auth1 : <<include>>
+config ---|> auth1 : <<include>>
+public ---|> auth1 : <<include>>
+rm ---|> auth1 : <<include>>
+
+gcc --|> auth2 : <<include>>
+rp--|> auth2 : <<include>>
+@enduml

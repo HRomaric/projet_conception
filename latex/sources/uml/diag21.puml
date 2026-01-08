@@ -1,0 +1,26 @@
+@startuml
+skinparam sequenceMessageAlign center
+skinparam actorStyle hollow
+autonumber
+
+actor "Utilisateur" as u
+participant "Application" as app
+actor "serveur mail" as sm
+
+== Prérequis ==
+u -> app: est inscrit
+hnote across
+    Processus 1 décrit dans le cas d'utilisation __inscription__
+end note
+== Processus ==
+app -> u: reçoit un message
+alt option mail activée
+    app -> sm: demande l'envoi d'un mail
+    sm -> u: envoie un mail
+    u -> u: consulte sa boîte mail
+end
+u -> u: consulte le message
+alt premier message reçu d'un autre utilisateur
+    u -> app: peut choisir de matcher
+end
+@enduml

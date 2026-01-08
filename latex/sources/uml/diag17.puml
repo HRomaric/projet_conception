@@ -1,0 +1,30 @@
+@startuml
+skinparam sequenceMessageAlign center
+skinparam actorStyle hollow
+autonumber
+
+actor "Utilisateur" as u
+participant "Application" as app
+
+
+== Prérequis ==
+u -> app: a validé un profil
+hnote across
+    Processus 1 décrit dans le cas d'utilisation __valider profil__
+end note
+== Processus ==
+u -> app: envoie un message
+app -> u: bloque l'envoie de message
+u -> u: attend une réponce
+alt il n'y a pas de match
+ app -> u: informe qu'il n'y a pas match
+else il y a match
+app -> u: informe qu'il y a match
+app -> u: débloque l'envoie de message
+loop tant que la conversation dure
+    u->app: envoie un ou plusieurs messages
+    u -> u: attend une réponce
+end
+end
+
+@enduml

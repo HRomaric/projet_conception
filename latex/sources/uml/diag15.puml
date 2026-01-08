@@ -1,0 +1,54 @@
+@startuml
+autonumber
+skinparam sequenceMessageAlign center
+skinparam actorStyle hollow
+
+actor "Utilisateur" as usr
+participant "Application" as app
+
+hnote across
+     ICI l'utilisateur 2 est l'utilisateur dont l'utilisateur principale est "intéresser"
+end note
+
+== Prérequis ==
+     usr -> app : se connecter
+     usr -> app : Consulter profil
+     hnote across
+     Avoir fait le cas d'usage __Consulter recomendation__ ou __Rechercher profil__
+     end note
+
+== Processus ==
+
+
+opt Sur le profil d'un utilisateur
+     usr -> app : Sélectionne option du profil
+     usr -> app : Sélectionne option "Intéresser par le profil"
+     app -> usr : Validation de l'action
+     app -> app : Notifie de l'utilisateur 2
+end
+
+
+
+
+
+opt depuis l'onglet recomendation
+     usr -> app : Sélectionne option "Intéresser par le profil"
+     app -> usr : Validation de l'action
+     app -> app : Notifie de l'utilisateur 2
+end
+
+
+opt utilisateur 2 intéressé par utilisateur 1
+     opt utilisateur 1 pas intéressé par utilisateur 2
+          usr -> app : valide le profil de l'utilisateur 2
+          hnote across
+          Les utilisateur peuvent s'envoyer des mesages
+          end note
+     end
+
+     opt utilisateur 1 pas intéressé par utilisateur 2
+          usr -> app : invalide le profil de l'utilisateur 2
+     end
+
+end
+@enduml

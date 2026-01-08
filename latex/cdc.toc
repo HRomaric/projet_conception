@@ -1,0 +1,97 @@
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{\numberline {1}Présentation du projet}{1}{chapter.1}%
+\contentsline {paragraph}{}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Diagramme de contexte statique}{2}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Diagramme des cas d'utilisations}{3}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Premier diagramme des cas d'utilisations}{4}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Description du cas d’utilisation 1 : Créer un compte}{5}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Sommaire d’identification }{5}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Besoins en IHM }{5}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Contraintes non fonctionnelles}{5}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Descriptions des scénarios}{5}{subsection.3.2.4}%
+\contentsline {section}{\numberline {3.3}Description du cas d’utilisation 2 : Vérifier l’adresse mail}{8}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Sommaire d’identification }{8}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Besoins en IHM }{8}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Contraintes non fonctionnelles}{8}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Descriptions des scénarios}{8}{subsection.3.3.4}%
+\contentsline {section}{\numberline {3.4}Description du cas d’utilisation 3 : Prouver son identité}{10}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Sommaire d’identification }{10}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Besoins en IHM }{10}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Contraintes non fonctionnelles}{10}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Descriptions des scénarios}{10}{subsection.3.4.4}%
+\contentsline {section}{\numberline {3.5}Description du cas d’utilisation 4 : Gérer les signalements}{12}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Sommaire d’identification }{12}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Besoins en IHM }{12}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Contraintes non fonctionnelles}{12}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}Descriptions des scénarios}{12}{subsection.3.5.4}%
+\contentsline {section}{\numberline {3.6}Description du cas d’utilisation 5 : Gérer les demande de création de compte}{15}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Sommaire d’identification }{15}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Besoins en IHM }{15}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}Contraintes non fonctionnelles}{15}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.6.4}Descriptions des scénarios}{15}{subsection.3.6.4}%
+\contentsline {section}{\numberline {3.7}Description du cas d’utilisation 6 : Se connecter}{17}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Sommaire d’identification }{17}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Besoins en IHM }{17}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.3}Contraintes non fonctionnelles}{17}{subsection.3.7.3}%
+\contentsline {subsection}{\numberline {3.7.4}Descriptions des scénarios}{17}{subsection.3.7.4}%
+\contentsline {section}{\numberline {3.8}Description du cas d’utilisation 7 : Modifier son profil}{19}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}Sommaire d’identification }{19}{subsection.3.8.1}%
+\contentsline {subsection}{\numberline {3.8.2}Besoins en IHM }{19}{subsection.3.8.2}%
+\contentsline {subsection}{\numberline {3.8.3}Contraintes non fonctionnelles}{19}{subsection.3.8.3}%
+\contentsline {subsection}{\numberline {3.8.4}Descriptions des scénarios}{19}{subsection.3.8.4}%
+\contentsline {section}{\numberline {3.9}Description du cas d’utilisation 8 : Configurer son profil}{21}{section.3.9}%
+\contentsline {subsection}{\numberline {3.9.1}Sommaire d’identification }{21}{subsection.3.9.1}%
+\contentsline {subsection}{\numberline {3.9.2}Besoins en IHM }{21}{subsection.3.9.2}%
+\contentsline {subsection}{\numberline {3.9.3}Contraintes non fonctionnelles}{21}{subsection.3.9.3}%
+\contentsline {subsection}{\numberline {3.9.4}Descriptions des scénarios}{21}{subsection.3.9.4}%
+\contentsline {section}{\numberline {3.10}Description du cas d’utilisation 9 : Modifier son affichage public}{24}{section.3.10}%
+\contentsline {subsection}{\numberline {3.10.1}Sommaire d’identification }{24}{subsection.3.10.1}%
+\contentsline {subsection}{\numberline {3.10.2}Besoins en IHM }{24}{subsection.3.10.2}%
+\contentsline {subsection}{\numberline {3.10.3}Contraintes non fonctionnelles}{24}{subsection.3.10.3}%
+\contentsline {subsection}{\numberline {3.10.4}Descriptions des scénarios}{24}{subsection.3.10.4}%
+\contentsline {section}{\numberline {3.11}Description du cas d’utilisation 10 : Consulter ses notifications}{26}{section.3.11}%
+\contentsline {subsection}{\numberline {3.11.1}Sommaire d’identification }{26}{subsection.3.11.1}%
+\contentsline {subsection}{\numberline {3.11.2}Besoins en IHM }{26}{subsection.3.11.2}%
+\contentsline {subsection}{\numberline {3.11.3}Contraintes non fonctionnelles}{26}{subsection.3.11.3}%
+\contentsline {subsection}{\numberline {3.11.4}Descriptions des scénarios}{26}{subsection.3.11.4}%
+\contentsline {section}{\numberline {3.12}Description du cas d’utilisation 11 : Consulter les profils recommandé}{28}{section.3.12}%
+\contentsline {subsection}{\numberline {3.12.1}Sommaire d’identification }{28}{subsection.3.12.1}%
+\contentsline {subsection}{\numberline {3.12.2}Besoins en IHM }{28}{subsection.3.12.2}%
+\contentsline {subsection}{\numberline {3.12.3}Contraintes non fonctionnelles}{28}{subsection.3.12.3}%
+\contentsline {subsection}{\numberline {3.12.4}Descriptions des scénarios}{28}{subsection.3.12.4}%
+\contentsline {section}{\numberline {3.13}Description du cas d’utilisation 12 : Rechercher des profils}{31}{section.3.13}%
+\contentsline {subsection}{\numberline {3.13.1}Sommaire d’identification }{31}{subsection.3.13.1}%
+\contentsline {subsection}{\numberline {3.13.2}Besoins en IHM }{31}{subsection.3.13.2}%
+\contentsline {subsection}{\numberline {3.13.3}Contraintes non fonctionnelles}{31}{subsection.3.13.3}%
+\contentsline {subsection}{\numberline {3.13.4}Descriptions des scénarios}{31}{subsection.3.13.4}%
+\contentsline {section}{\numberline {3.14}Description du cas d’utilisation 13 : Aimer un profil}{34}{section.3.14}%
+\contentsline {subsection}{\numberline {3.14.1}Sommaire d’identification }{34}{subsection.3.14.1}%
+\contentsline {subsection}{\numberline {3.14.2}Besoins en IHM }{34}{subsection.3.14.2}%
+\contentsline {subsection}{\numberline {3.14.3}Contraintes non fonctionnelles}{34}{subsection.3.14.3}%
+\contentsline {subsection}{\numberline {3.14.4}Descriptions des scénarios}{34}{subsection.3.14.4}%
+\contentsline {section}{\numberline {3.15}Description du cas d’utilisation 14 : Consulter ses messages}{37}{section.3.15}%
+\contentsline {subsection}{\numberline {3.15.1}Sommaire d’identification }{37}{subsection.3.15.1}%
+\contentsline {subsection}{\numberline {3.15.2}Besoins en IHM }{37}{subsection.3.15.2}%
+\contentsline {subsection}{\numberline {3.15.3}Contraintes non fonctionnelles}{37}{subsection.3.15.3}%
+\contentsline {subsection}{\numberline {3.15.4}Descriptions des scénarios}{37}{subsection.3.15.4}%
+\contentsline {subsection}{\numberline {3.15.5}Description du cas d’utilisation 15 : Envoyer un message}{39}{subsection.3.15.5}%
+\contentsline {subsection}{\numberline {3.15.6}Sommaire d’identification }{39}{subsection.3.15.6}%
+\contentsline {subsection}{\numberline {3.15.7}Besoins en IHM }{39}{subsection.3.15.7}%
+\contentsline {subsection}{\numberline {3.15.8}Contraintes non fonctionnelles}{39}{subsection.3.15.8}%
+\contentsline {subsection}{\numberline {3.15.9}Descriptions des scénarios}{39}{subsection.3.15.9}%
+\contentsline {section}{\numberline {3.16}Description du cas d’utilisation 16 : Signaler un contenu}{41}{section.3.16}%
+\contentsline {subsection}{\numberline {3.16.1}Sommaire d’identification }{41}{subsection.3.16.1}%
+\contentsline {subsection}{\numberline {3.16.2}Besoins en IHM }{41}{subsection.3.16.2}%
+\contentsline {subsection}{\numberline {3.16.3}Contraintes non fonctionnelles}{41}{subsection.3.16.3}%
+\contentsline {subsection}{\numberline {3.16.4}Descriptions des scénarios}{41}{subsection.3.16.4}%
+\contentsline {section}{\numberline {3.17}Description du cas d’utilisation 17 : Recevoir un message}{44}{section.3.17}%
+\contentsline {subsection}{\numberline {3.17.1}Sommaire d’identification }{44}{subsection.3.17.1}%
+\contentsline {subsection}{\numberline {3.17.2}Besoins en IHM }{44}{subsection.3.17.2}%
+\contentsline {subsection}{\numberline {3.17.3}Contraintes non fonctionnelles}{44}{subsection.3.17.3}%
+\contentsline {subsection}{\numberline {3.17.4}Descriptions des scénarios}{44}{subsection.3.17.4}%
+\contentsline {chapter}{\numberline {4}Modèle de donné}{46}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Diagramme d'état d'un compte}{46}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Diagramme de classe}{47}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Maquette de l'application}{49}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Dictionnaire}{57}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Schéma entité-association}{58}{section.4.5}%

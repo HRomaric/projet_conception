@@ -1,0 +1,25 @@
+@startuml
+autonumber
+skinparam sequenceMessageAlign center
+skinparam actorStyle hollow
+actor "Utilisateur" as u
+participant "Application" as ins
+
+== Prérequis ==
+
+u -> ins: inscription en cours
+
+== Processus ==
+
+u -> ins: envoie ses papiers d'identité
+ins -> ins: processus de vérification d'identité
+hnote across
+    Processus 3 décrit dans le cas d'utilisation __gérer inscription__
+end note
+alt demande valide
+    ins -> ins: création du compte
+    ins -> u: notifie l'utilisateur de la validation
+else demande non valide
+    ins -> u: notifie l'utilisateur du refus et de la justification
+end
+@enduml

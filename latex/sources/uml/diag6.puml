@@ -1,0 +1,31 @@
+@startuml
+autonumber
+skinparam sequenceMessageAlign center
+skinparam actorStyle hollow
+
+actor "Modérateur" as m
+participant "Application" as ins
+
+== Prérequis ==
+
+ins -> ins: signale un contenu douteux
+ins -> m: prévient le modérateur du signalement
+
+== Processus ==
+
+m -> ins: commence le processus de vérification
+ins -> m: envoie les informations du signalement
+    m -> m: vérifie le signalement
+    alt contenu jugé inapproprié
+        m -> ins: bloque la personne signalée
+        ins -> m: demande de justification
+        m -> ins: justifie
+        ins -> ins: prévient l'utilisateur signalé et transmet la justification
+    else contenu non problématique
+        m -> ins: annule le signalement
+        ins -> m: demande de justification
+        m -> ins: justifie
+        ins -> ins: prévient l'utilisateur ayant émis le signalement \n et transmet la justification
+    end
+m -> ins: termine le processus de vérification
+@enduml
